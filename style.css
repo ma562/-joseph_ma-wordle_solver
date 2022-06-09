@@ -173,11 +173,11 @@
 }
 
 @media (max-width: 1000px){
-	.edge_case, .information {
+	.edge_case2, .edge_case, .information {
 		padding: 15px;
 	}
 
-	.edge_case, .edge1, .edge2, .information, .vid1 {
+	.edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
 		flex: 100%;
 		left: 0%;
 		right: 0%;
