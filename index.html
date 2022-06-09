@@ -63,6 +63,19 @@
 		<div class = "bottom_info">
 			<div class = "edge_case2">
 				<div class = "text">Exploiting the Edge Case</div>
+				In the previous example, we saw that the first <b>A</b> in DRAMA was green while the second <b>A</b> was gray. Apart from knowing that the fifth letter in the final answer is not <b>A</b>, we can also deduce that the final answer will only have one <b>A</b> in it due to the presence of the gray <b>A</b> at the end.
+				<br><br>
+				In the absence of a gray letter, the most we can assume is that we will have at least the number of green + yellow letters in the final answer. For example, when we guess <b>TARTS</b>, we know for sure that the final answer will have at least two <b>T</b>s but we will not know the exact number. Similarly when we guess <b>BUTTS</b>, we know that the final answer will have at least two <b>T</b>s.<br><br>
+				In the presence of a gray letter, we can conclude the number of <b>T</b>s we will see in the final answer. In addition to telling us where that letter will not be, the presence of a gray letter also serves as an upper limit to the number of times we can see that letter appear in the answer. For example, due to the third <b>T</b> being gray in the word <b>TUTTI</b>, we are able to conclude that the final answer has exactly two <b>T</b>s.
+			</div>
+			<div class = "edge3">
+				<img src = "images/tarts.png" class = "pic" width = "100%" alt = "">
+			</div>
+			<div class = "edge4">
+				<img src = "images/butts.png" class = "pic" width = "100%" alt = "">
+			</div>
+			<div class = "edge5">
+				<img src = "images/tutti.png" class = "pic" width = "100%" alt = "">
 			</div>
 		</div>
 	</body>

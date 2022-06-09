@@ -131,6 +131,47 @@
 	right: 2%;
 }
 
+.bottom_info {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	top: 100px;
+	position: relative;
+}
+
+.edge_case2 {
+	position: relative;
+	left: 2%;
+	background: #e3e3e3;
+	width: 35%;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	color: #00274c;
+	border-radius: 15px;
+	padding: 10px;
+	text-align: justify;
+}
+
+.edge3 {
+	top: 80px;
+	position: relative;
+	width: 19%;
+}
+
+.edge4 {
+	top: 80px;
+	position: relative;
+	width: 17.5%;
+}
+
+.edge5 {
+	top: 80px;
+	position: relative;
+	width: 20%;
+	right: 2%;
+}
+
 @media (max-width: 1000px){
 	.edge_case, .information {
 		padding: 15px;
