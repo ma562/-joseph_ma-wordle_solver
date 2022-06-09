@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" style = "scroll-behavior: smooth;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+		<title>Wordle Solver</title>
+		<link rel="icon" href="images/jm.png">
+		<link rel = "stylesheet" href="style.css">
+	</head>
+	<nav class = "navbar">
+		<div class = "max-width">
+			<div class = "logo"><a href="#">Wordle Solver</a></div>
+			<ul class = "menu">
+				<li><a href="https://ma562.github.io/joseph_ma/#projects">Go Back</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<body>
+		<div class = "top_info">
+			<div class = "vid1">
+				<iframe width="728" height="410" src="https://www.youtube.com/embed/ah8atZPHk3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class = "information">
+				<div class = "text">About</div>
+				Wordle is a word puzzle game where a user attempts to guess a certain word based on hints from previous guesses. The official game was purchased by The New York Times and can be found <b><a href = "https://www.nytimes.com/games/wordle/index.html" target = "_blank">here</a></b>. According to the game page, the rules are as follows:<br><br>
+				<ul class = "shift">
+					<li>Green letter - Letter is in the word and in the correct spot</li>
+					<li>Yellow letter - Letter is in the word but wrong spot</li>
+					<li>Gray letter - Letter is not in the word in any spot</li>
+				</ul>
+
+				<br>The program was written in Python with the help of the Pandas library which allows for quick and efficient data manipulation using Dataframes. The video demonstrates the program solving a variety of words from lengths 4 to 11. With 18 words solved in the demonstration, it was done faster than one word per minute. The Wordle game site used in the demonstration can be found <b><a href = "https://wordlegame.org/" target = "_blank">here</a></b>.
+				<br><br>
+				The Google Colab page can be found <b><a href = "https://colab.research.google.com/drive/1SzFAwAKmTvuBEQiC_9qqyY_FT31sxN7C?usp=sharing" target = "_blank">here</a></b>. And source code/ word files <b><a href = "https://colab.research.google.com/drive/1SzFAwAKmTvuBEQiC_9qqyY_FT31sxN7C?usp=sharing" target = "_blank">here</a></b>.
+
+			</div>
+<!-- 			<div class = "rules">
+				<img src = "images/rule_nytimes.png" class = "pic" width = "100%" alt = "">
+
+			</div> -->
+
+		</div>
+		<br>
+		<div class = "mid_info">
+			<div class = "edge_case">
+				<div class = "text">The Unexpected Edge Case</div>
+				It was not until I was done writing version 1 of the program and started testing it that I realized that there was an edge case. The gray letter's condition- <b>Letter is not in the word in any spot</b> can actually be misleading because the Green and Yellow letter's condition take precedence over it.<br><br>
+				For example when the answer is <b>TRAIT</b>, if you guess <b>NAVAL</b>, the first <b>A</b> will be yellow and the second <b>A</b> will be gray. The presence of the second gray <b>A</b> does not, however, mean that the letter <b>A</b> will not be found in the answer.
+				<br><br>
+				Similarly, if you guess <b>DRAMA</b>, the first <b>A</b> will be green and the second <b>A</b> will be gray. Therefore, the presence of a gray letter means that it does not appear in the answer <b>IF AND ONLY IF</b> that word does not appear green or yellow elsewhere in the guessed word.
+				<br><br>
+				It may seem like the only useful information we can obtain from a gray letter that is present in a guess where it also appears as green or yellow is that the letter does not appear in that gray spot in the final answer. However, there is actually some valuable information we can gain from this edge case.
+			</div>
+			<div class = "edge1">
+				<img src = "images/edge1.png" class = "pic" width = "100%" alt = "">
+			</div>
+			<div class = "edge2">
+				<img src = "images/edge2.png" class = "pic" width = "100%" alt = "">
+			</div>
+		</div>
+		<br>
+		<div class = "bottom_info">
+			<div class = "edge_case2">
+				<div class = "text">Exploiting the Edge Case</div>
+			</div>
+		</div>
+	</body>
+</html>
