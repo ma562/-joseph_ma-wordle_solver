@@ -94,18 +94,18 @@
 				</ul>
 				<br>
 				<mark><b>3.</b></mark> All the <b>Gray</b> letters are looked at and either <b>condition 3A</b> or <b>condition 3B</b> is applied.<br><br>
-				If no <b>Yellow</b> or <b>Green</b> letters are found in the feedback, <b>condition 3A</b> is applied.<br>
+				If that letter did not appear <b>Yellow</b> or <b>Green</b> in the feedback, <b>condition 3A</b> is applied.<br>
 				<ul class = "shift">
 					<li><b>Condition 3A</b>: The word does not contain that letter.</li>
 				</ul><br>
 				
-				Otherwise, if <b>Yellow</b> or <b>Green</b> letters are found in the feedback <b>condition 3B</b> is applied.<br>
+				Otherwise, if that letter appeared <b>Yellow</b> or <b>Green</b> in the feedback <b>condition 3B</b> is applied.<br>
 				<ul class = "shift">
 					<li><b>Condition 3B</b>: The word does not contain that letter in that spot.</li>
 				</ul><br>
 				
 				<mark><b>4.</b></mark> Iterate through the set of green and yellow letters and either <b>condition 4A</b> or <b>condition 4B</b> is applied.<br>
-				*Set contains unique elements and therefore each unique letter will only be checked once.<br><br>
+				*Set contains unique elements because it is only necessary to check each unique letter once.<br><br>
 				If that letter did not appear gray anywhere in the feedback, <b>condition 4A</b> is applied.<br>
 				<ul class = "shift">
 					<li><b>Condition 4A</b>: The number of times that letter appears in the answer is at least the number of times it appeared <b>Green</b> + <b>Yellow</b>.</li>
