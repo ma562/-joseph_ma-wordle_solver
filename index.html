@@ -48,7 +48,7 @@
 				It was not until I was done writing version 1 of the program and started testing it that I realized that there was an edge case. The gray letter's condition- <b>Letter is not in the word in any spot</b> can actually be misleading because the Green and Yellow letter's condition take precedence over it.<br><br>
 				For example when the answer is <b>TRAIT</b>, if you guess <b>NAVAL</b>, the first <b>A</b> will be yellow and the second <b>A</b> will be gray. The presence of the second gray <b>A</b> does not, however, mean that the letter <b>A</b> will not be found in the answer.
 				<br><br>
-				Similarly, if you guess <b>DRAMA</b>, the first <b>A</b> will be green and the second <b>A</b> will be gray. Therefore, the presence of a gray letter means that it does not appear in the answer <b>IF AND ONLY IF</b> that word does not appear green or yellow elsewhere in the guessed word.
+				Similarly, if you guess <b>DRAMA</b>, the first <b>A</b> will be green and the second <b>A</b> will be gray. Therefore, the presence of a gray letter means that it does not appear in the answer <b>if and only if</b> that letter does not appear green or yellow elsewhere in the guessed word.
 				<br><br>
 				It may seem like the only useful information we can obtain from a gray letter that is present in a guess where it also appears as green or yellow is that the letter does not appear in that gray spot in the final answer. However, there is actually some valuable information we can gain from this edge case.
 			</div>
@@ -77,6 +77,51 @@
 			<div class = "edge5">
 				<img src = "images/tutti.png" class = "pic" width = "100%" alt = "">
 			</div>
+		</div>
+		<br>
+		<div class = "condition_info">
+			<div class = "conditions">
+				<div class = "text">Determining the conditions</div>
+				The conditions are then evaluated as follows:<br><br>
+				<mark><b>1.</b></mark> All the <b>Green</b> letters are looked at and <b>condition 1</b> is applied.
+				<ul class = "shift">
+					<li><b>Condition 1</b>: The word must contain that letter in that spot<br></li>
+				</ul>
+				<br>
+				<mark><b>2.</b></mark> All the <b>Yellow</b> letters are looked at and <b>condition 2</b> is applied.<br>
+				<ul class = "shift">
+					<li><b>Condition 2</b>: The word must contain that letter and the letter does not appear in that spot<br></li>
+				</ul>
+				<br>
+				<mark><b>3.</b></mark> All the <b>Gray</b> letters are looked at and either <b>condition 3A</b> or <b>condition 3B</b> is applied.<br><br>
+				If no <b>Yellow</b> or <b>Green</b> letters are found in the feedback, <b>condition 3A</b> is applied.<br>
+				<ul class = "shift">
+					<li><b>Condition 3A</b>: The word does not contain that letter.</li>
+				</ul><br>
+				
+				Otherwise, if <b>Yellow</b> or <b>Green</b> letters are found in the feedback <b>condition 3B</b> is applied.<br>
+				<ul class = "shift">
+					<li><b>Condition 3B</b>: The word does not contain that letter in that spot.</li>
+				</ul><br>
+				
+				<mark><b>4.</b></mark> Iterate through the set of green and yellow letters and either <b>condition 4A</b> or <b>condition 4B</b> is applied.<br>
+				*Set contains unique elements and therefore each unique letter will only be checked once.<br><br>
+				If that letter did not appear gray anywhere in the feedback, <b>condition 4A</b> is applied.<br>
+				<ul class = "shift">
+					<li><b>Condition 4A</b>: The number of times that letter appears in the answer is at least the number of times it appeared <b>Green</b> + <b>Yellow</b>.</li>
+				</ul><br>
+				
+				If that letter appeared gray anywhere in the feedback, <b>condition 4B</b> is applied.<br>
+				<ul class = "shift">
+					<li><b>Condition 4B</b>: The number of times that letter appears in the answer is exactly the number of times it appeared <b>Green</b> + <b>Yellow</b>.</li>
+				</ul><br>
+
+				<mark><b>5.</b></mark> Bitwise <b>AND</b> all conditions together (including ones from previous and future guesses).
+			</div>
+			<div class = "rules">
+				<img src = "images/new_rules.png" class = "pic" width = "100%" alt = "">
+			</div>
+
 		</div>
 	</body>
 </html>
