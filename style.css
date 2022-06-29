@@ -259,9 +259,46 @@
 	right: 2%;
 }
 
+.start_results {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	top: 100px;
+	position: relative;
+}
+
+.results1 {
+	position: relative;
+	left: 2%;
+	width: 23.5%;
+}
+
+.results2 {
+	left: 1%;
+	position: relative;
+	width: 23.7%;
+}
+
+.results3 {
+	right: 1%;
+	position: relative;
+	width: 24.5%;
+}
+
+.results4 {
+	position: relative;
+	width: 24%;
+	right: 2%;
+}
+
 @media (max-width: 1000px){
 	.best_starter_about, .match, .random_about, .conditions, .edge_case2, .edge_case, .information {
 		padding: 15px;
+	}
+
+	.match {
+		top: 30px;
 	}
 
 	.best_starter_about, .match, .stats, .random_about, .conditions, .rules, .edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
