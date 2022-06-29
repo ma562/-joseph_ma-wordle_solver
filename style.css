@@ -17,6 +17,10 @@
 	border-radius: 30px;
 }
 
+.pic2 {
+	border-radius: 10px;
+}
+
 .text{
 	font-size: 25px;
 	font-weight: 600;
@@ -293,7 +297,7 @@
 }
 
 @media (max-width: 1000px){
-	.best_starter_about, .match, .random_about, .conditions, .edge_case2, .edge_case, .information {
+	.best_starter_about, .random_about, .conditions, .edge_case2, .edge_case, .information {
 		padding: 15px;
 	}
 
@@ -301,7 +305,7 @@
 		top: 30px;
 	}
 
-	.best_starter_about, .match, .stats, .random_about, .conditions, .rules, .edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
+	.results1, .results2, .results3, .results4, .best_starter_about, .match, .stats, .random_about, .conditions, .rules, .edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
 		flex: 100%;
 		left: 0%;
 		right: 0%;
