@@ -111,7 +111,7 @@
 					<li><b>Condition 4B</b>: The number of times that letter appears in the answer is exactly the number of times it appeared <b>Green</b> + <b>Yellow</b>.</li>
 				</ul><br>
 
-				<mark><b>5.</b></mark> Bitwise <b>AND</b> all conditions together (including ones from previous and future guesses).
+				<mark><b>5.</b></mark> Logical <b>AND</b> all conditions together (including ones from previous and future guesses).
 			</div>
 			<div class = "rules">
 				<img src = "images/new_rules.png" class = "pic" width = "100%" alt = "">
@@ -124,11 +124,25 @@
 				There are about 2300 total answers in the New York Times Wordle game and nearly 13000 possible valid words to enter as guesses. The program went through each of the 2300 answers and started off each time by randomly selecting from the list of 13000 possible valid words as a guess. The conditions were then evaluated based on the feedback color codes. The program continued to randomly select from the list of possible answers that had fit those previously evaluated conditions. This process was repeated until it arrived at the correct answer.<br><br>
 				The average number of guesses required to arrive at the correct answer was about <b>4.888</b>.<br><br>
 				A demonstration video and additional detailed information including the word guess history, chances of winning  and number of possible answers on each guess round and bits of information obtained can be found <b><a href = "https://ma562.github.io/Wordle-Solver-with-Random-Selection-/">here</a></b>.
-
-
 			</div>
 			<div class = "stats">
 				<img src = "images/freq_guess1.PNG" class = "pic" width = "100%" alt = "">
+			</div>
+		</div>
+		<br>
+		<div class = "best_starter">
+			<div class = "best_starter_about">
+				<div class = "text">Determining the Best Starter Word</div>
+				First of all, we have to define what we mean by the best starter word. In this case, the best starter word would be the word which on average gives us the most information or leaves us with the least number of possible words left to choose from. To illustrate this, on the left column in the matching diagram, we have the list of valid words to be used as guesses. From Aahed to Zymic, the Wordle game accepts 12953 guesses as valid words. On the right column, we have the list of Wordle answers which will be used in the New York Times which amount to about 2310 words. Each of the 12953 possible guesses will be sent in as an answer towards each of the 2310 words. The average amount of information and number of possibilities will be calculated for each of the 12953 words. <br><br>
+				For example, when <b>Aahed</b> is used as a guess when the answer is <b>Aback</b>, we will get <span style="background-color:#6ca965">a</span><span style="background-color:#c8b653">a</span><span style="background-color:#787c7f">hed</span>. The number of words that match the criteria based on the color feedback is 139 so we went from 12539 possible guesses down to 139. This gives us about 6.495 bits of information since number of possibile words was halved about 6.495 times.<br><br>If we use <b>Aahed</b> when the answer is <b>Abase</b>, we will get  <span style="background-color:#6ca965">a</span><span style="background-color:#c8b653">a</span><span style="background-color:#787c7f">h</span><span style="background-color:#c8b653">e</span><span style="background-color:#787c7f">d</span>. The number of words that match the criteria based on the color feedback is 38. This gives us about 8.366 bits of information.<br><br>
+				If we use <b>Aahed</b> when the answer is <b>Zesty</b>, we will get <span style="background-color:#787c7f">aah</span><span style="background-color:#c8b653">e</span><span style="background-color:#787c7f">d</span>. The number of words that match the criteria based on the color feedback is 1634. This gives us about 2.940 bits of information.<br><br>
+				If we use <b>Aahed</b> when the answer is <b>Zonal</b>, we will get <span style="background-color:#c8b653">a</span><span style="background-color:#787c7f">ahed</span>. The number of words that match the criteria based on the color feedback is 1126. This gives us about 3.477 bits of information.<br><br>
+				Aahed would be passed to all 2310 words. The average bits of information and number of words left that match the criteria will be computed to evaluate how good it is. The average number of bits of information from Aahed was <b>4.468</b> bits and the average number of words left that match the criteria was about <b>1048.32</b> words. This will be evaluated for all 12953 words. With nearly <b>30 million</b> iterations, this program took a very long time to run but the results seem to be worth it in the end. While the average number of bits and average number of possible words left yielded different results (which is not surprising given that the logarithm is non-linear), it was quite clear that <b>Soare</b> was one of the best openers as it yielded an average of <b>6.245</b> bits of information and left us with an average of <b>273.92</b> words left to choose from.
+				A summary of the results can be found below. The code and full results can be found <b><a href = "https://github.com/ma562/best_wordle_starters" target = "_blank">here</a></b>.<br><br>
+				Special thanks to Grant Sanderson for providing the text files of possible list of guesses and answers. If you want to learn more about how this works be sure to check out his <b><a href = "https://www.youtube.com/watch?v=fRed0Xmc2Wg&t=540s&ab_channel=3Blue1Brown" target = "_blank">channel</a></b>.
+			</div>
+			<div class = "match">
+				<img src = "images/match.png" class = "pic" width = "100%" alt = "">
 			</div>
 		</div>
 	</body>
