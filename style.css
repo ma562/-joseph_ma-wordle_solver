@@ -275,24 +275,24 @@
 .results1 {
 	position: relative;
 	left: 2%;
-	width: 23.1%;
-}
-
-.results2 {
-	left: 0.5%;
-	position: relative;
 	width: 23.3%;
 }
 
-.results3 {
-	right: 0.5%;
+.results2 {
+	left: 0.6%;
 	position: relative;
-	width: 24%;
+	width: 23.5%;
+}
+
+.results3 {
+	right: 0.6%;
+	position: relative;
+	width: 24.3%;
 }
 
 .results4 {
 	position: relative;
-	width: 24.3%;
+	width: 24.4%;
 	right: 2%;
 }
 
