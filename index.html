@@ -111,7 +111,7 @@
 					<li><b>Condition 4B</b>: The number of times that letter appears in the answer is exactly the number of times it appeared <b>Green</b> + <b>Yellow</b>.</li>
 				</ul><br>
 
-				<mark><b>5.</b></mark> Logical <b>AND</b> all conditions together (including ones from previous and future guesses).
+				<mark><b>5.</b></mark> Logical <b>AND</b> all the <b>accumulated</b> conditions together
 			</div>
 			<div class = "rules">
 				<img src = "images/new_rules.png" class = "pic" width = "100%" alt = "">
@@ -121,7 +121,9 @@
 		<div class = "random_selection">
 			<div class = "random_about">
 				<div class = "text">How well the Program does so far</div>
-				There are about 2300 total answers in the New York Times Wordle game and nearly 13000 possible valid words to enter as guesses. The program went through each of the 2300 answers and started off each time by randomly selecting from the list of 13000 possible valid words as a guess. The conditions were then evaluated based on the feedback color codes. The program continued to randomly select from the list of possible answers that had fit those previously evaluated conditions. This process was repeated until it arrived at the correct answer.<br><br>
+				There are about 2300 total answers in the New York Times Wordle game and nearly 13000 possible valid words to enter as guesses. The program went through each of the 2300 answers and started off each time by randomly selecting from the list of 13000 possible valid words as a guess. It was assumed that the answer could be any of the 13000 possible valid guesses just to challenge the program and see how well it could do.<br><br>
+
+				The conditions were then evaluated based on the feedback color codes. The program continued to randomly select from the list of possible answers that fit the previously accumulated conditions. This process was repeated until it arrived at the correct answer.<br><br>
 				The average number of guesses required to arrive at the correct answer was about <b>4.888</b>.<br><br>
 				A demonstration video and additional detailed information including the word guess history, chances of winning  and number of possible answers on each guess round and bits of information obtained can be found <b><a href = "https://ma562.github.io/Wordle-Solver-with-Random-Selection-/">here</a></b>.
 			</div>
@@ -163,9 +165,27 @@
 		<br>
 		<div class = "elimination">
 			<div class = "elimination_about">
-				<div class = "text">Making the most out of each Guess</div>
+				<div class = "text">Making the most out of each guess</div>
+				Perhaps we can gain some insight into how to reduce the number of guesses by observing the guess history for words that take an especially large number of guesses. <br><br>
+				Just for example, we might end up with a list of possiblities looking like:<br><br>
+				<ul class = "shift">
+					<li>maker</li>
+					<li>taker</li>
+					<li>baker</li>
+					<li>faker</li>
+					<li>mater</li>
+					<li>poker</li>
+				</ul><br>
+				Rather than randomly select from the list of possible answers, it might be a better idea to guess a word like <b>ambit</b>. This method will be more efficient in shrinking the list of possible answers. <br><br>
+				<li>If we get <span style="background-color:#c8b653">a</span>, then we can eliminate <b>poker</b>. Otherwise if we get <span style="background-color:#787c7f">a</span>, we can conclude the answer is <b>poker</b>.</li>
+				<li>If we get <span style="background-color:#c8b653">m</span>, then we know the answer is either <b>maker</b> or <b>mater</b>. Otherwise, if we get <span style="background-color:#787c7f">m</span>, we can eliminate <b>maker</b> and <b>mater</b>.</li>
+				<li>If we get <span style="background-color:#c8b653">b</span>, we know the answer is <b>baker</b>. Otherwise, if we get <span style="background-color:#787c7f">b</span>, we can eliminate <b>baker</b>.</li>
+				<li>If we get <span style="background-color:#c8b653">t</span>, we know the answer is either <b>taker</b> or <b>mater</b>. Otherwise, if we get <span style="background-color:#787c7f">t</span>, we can eliminate <b>taker</b> and <b>mater</b></li>
+				<br>
+				With this method implemented and the word <b>tares</b> being used to start off each guess, the average number of guesses required to arrive at the correct answer was about <b>4.502</b>.<br><br>
+				A demonstration video and additional detailed information including the word guess history, chances of winning  and number of possible answers on each guess round and bits of information obtained can be found <b><a href = "https://ma562.github.io/elimination_wordle_solver_results/">here</a></b>.
 			</div>
-			<div class = "stats">
+			<div class = "stats2">
 				<img src = "images/freq_guess2.PNG" class = "pic" width = "100%" alt = "">
 			</div>
 		</div>

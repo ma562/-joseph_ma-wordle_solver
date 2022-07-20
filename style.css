@@ -218,7 +218,7 @@
 	position: relative;
 	left: 2%;
 	background: #e3e3e3;
-	width: 35%;
+	width: 40%;
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	color: #00274c;
@@ -228,9 +228,16 @@
 }
 
 .stats {
-	top: 35px;
+	top: 55px;
 	position: relative;
-	width: 60%;
+	width: 55%;
+	right: 2%;
+}
+
+.stats2 {
+	top: 220px;
+	position: relative;
+	width: 55%;
 	right: 2%;
 }
 
@@ -309,7 +316,7 @@
 	position: relative;
 	left: 2%;
 	background: #e3e3e3;
-	width: 35%;
+	width: 40%;
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	color: #00274c;
@@ -319,7 +326,7 @@
 }
 
 @media (max-width: 1000px){
-	.best_starter_about, .random_about, .conditions, .edge_case2, .edge_case, .information {
+	.elimination_about, .best_starter_about, .random_about, .conditions, .edge_case2, .edge_case, .information {
 		padding: 15px;
 	}
 
@@ -327,7 +334,7 @@
 		top: 30px;
 	}
 
-	.results1, .results2, .results3, .results4, .best_starter_about, .match, .stats, .random_about, .conditions, .rules, .edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
+	.elimination, .elimination_about, .results1, .results2, .results3, .results4, .best_starter_about, .match, .stats, .stats2, .random_about, .conditions, .rules, .edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
 		flex: 100%;
 		left: 0%;
 		right: 0%;
