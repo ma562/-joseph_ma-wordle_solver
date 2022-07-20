@@ -296,6 +296,28 @@
 	right: 2%;
 }
 
+.elimination {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	top: 100px;
+	position: relative;
+}
+
+.elimination_about {
+	position: relative;
+	left: 2%;
+	background: #e3e3e3;
+	width: 35%;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	color: #00274c;
+	border-radius: 15px;
+	padding: 10px;
+	text-align: justify;
+}
+
 @media (max-width: 1000px){
 	.best_starter_about, .random_about, .conditions, .edge_case2, .edge_case, .information {
 		padding: 15px;
