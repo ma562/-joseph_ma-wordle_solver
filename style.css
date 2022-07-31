@@ -325,6 +325,35 @@
 	text-align: justify;
 }
 
+.conclusion {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	top: 100px;
+	position: relative;
+}
+
+.conclusion_about {
+	position: relative;
+	left: 2%;
+	background: #e3e3e3;
+	width: 40%;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	color: #00274c;
+	border-radius: 15px;
+	padding: 10px;
+	text-align: justify;
+}
+
+.stats3 {
+	/*//top: px;*/
+	position: relative;
+	width: 55%;
+	right: 2%;
+}
+
 @media (max-width: 1000px){
 	.elimination_about, .best_starter_about, .random_about, .conditions, .edge_case2, .edge_case, .information {
 		padding: 15px;

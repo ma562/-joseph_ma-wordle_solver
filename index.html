@@ -121,7 +121,7 @@
 		<div class = "random_selection">
 			<div class = "random_about">
 				<div class = "text">How well the Program does so far</div>
-				There are about 2300 total answers in the New York Times Wordle game and nearly 13000 possible valid words to enter as guesses. The program went through each of the 2300 answers and started off each time by randomly selecting from the list of 13000 possible valid words as a guess. It was assumed that the answer could be any of the 13000 possible valid guesses just to challenge the program and see how well it could do.<br><br>
+				There are about 2300 total answers in the New York Times Wordle game and nearly 13000 possible valid words to enter as guesses. The program went through each of the 2300 answers and started off each time by randomly selecting from the list of 13000 possible valid words as a guess. It was assumed that the answer could be any of the 13000 possible valid guesses just to see how well the program does without overfitting to the data.<br><br>
 
 				The conditions were then evaluated based on the feedback color codes. The program continued to randomly select from the list of possible answers that fit the previously accumulated conditions. This process was repeated until it arrived at the correct answer.<br><br>
 				The average number of guesses required to arrive at the correct answer was about <b>4.888</b>.<br><br>
@@ -187,6 +187,17 @@
 			</div>
 			<div class = "stats2">
 				<img src = "images/freq_guess2.PNG" class = "pic" width = "100%" alt = "">
+			</div>
+		</div>
+		<br>
+		<div class = "conclusion">
+			<div class = "conclusion_about">
+				<div class = "text">If the program knew the word bank</div>
+				Up to this point the program had assumed that the answers could be any of the 13000 words. Using the most recent elimination method, if the program knew that the answers could only be from the list of about 2310 words, the average number of guesses decreases to <b>3.899</b> with <b>tares</b> used as the starting guess each time. <br><br>
+				Perhaps we can achieve an even lower average if we tried every single possiblity and found a single word on each attempt that would yield the absolute least number of possible answers. However, since this program is written to work for words of any length this will likely not be feasible.<br><br>
+			</div>
+			<div class = "stats3">
+				<img src = "images/freq_guess3.PNG" class = "pic" width = "100%" alt = "">
 			</div>
 		</div>
 	</body>
