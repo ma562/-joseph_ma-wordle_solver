@@ -355,7 +355,7 @@
 }
 
 @media (max-width: 1000px){
-	.elimination_about, .best_starter_about, .random_about, .conditions, .edge_case2, .edge_case, .information {
+	.conclusion_about, .elimination_about, .best_starter_about, .random_about, .conditions, .edge_case2, .edge_case, .information {
 		padding: 15px;
 	}
 
@@ -363,11 +363,15 @@
 		top: 30px;
 	}
 
-	.elimination, .elimination_about, .results1, .results2, .results3, .results4, .best_starter_about, .match, .stats, .stats2, .random_about, .conditions, .rules, .edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
+	.conclusion, .conclusion_about, .stats3, .elimination, .elimination_about, .results1, .results2, .results3, .results4, .best_starter_about, .match, .stats, .stats2, .random_about, .conditions, .rules, .edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
 		flex: 100%;
 		left: 0%;
 		right: 0%;
 		margin-bottom: 70px;
+	}
+
+	.stats2 {
+		top: 50px;
 	}
 
 	.top_info {
