@@ -46,7 +46,7 @@
 		<div class = "mid_info">
 			<div class = "edge_case">
 				<div class = "text">The Unexpected Edge Case</div>
-				It was not until I was done writing version 1 of the program and started testing it that I realized that there was an edge case. The gray letter's condition- <b>Letter is not in the word in any spot</b> can actually be misleading because the Green and Yellow letter's condition take precedence over it.<br><br>
+				It was not until I was done writing version 0 of the program and started testing it that I realized that there was an edge case. The gray letter's condition- <b>Letter is not in the word in any spot</b> can actually be misleading because the Green and Yellow letter's condition take precedence over it.<br><br>
 				For example when the answer is <b>TRAIT</b>, if you guess <b>NAVAL</b>, the first <b>A</b> will be yellow and the second <b>A</b> will be gray. The presence of the second gray <b>A</b> does not, however, mean that the letter <b>A</b> will not be found in the answer.
 				<br><br>
 				Similarly, if you guess <b>DRAMA</b>, the first <b>A</b> will be green and the second <b>A</b> will be gray. Therefore, the presence of a gray letter means that it does not appear in the answer <b>if and only if</b> that letter does not appear green or yellow elsewhere in the guessed word.
@@ -131,7 +131,7 @@
 
 				The conditions were then evaluated based on the feedback color codes. The program continued to randomly select from the list of possible answers that fit the previously accumulated conditions. This process was repeated until it arrived at the correct answer.<br><br>
 				The average number of guesses required to arrive at the correct answer was about <b>4.888</b>.<br><br>
-				A demonstration video and additional detailed information including the word guess history, chances of winning  and number of possible answers on each guess round and bits of information obtained can be found <b><a href = "https://ma562.github.io/Wordle-Solver-with-Random-Selection-/">here</a></b>.
+				A demonstration video and additional detailed information including the word guess history, chances of winning  and number of possible answers on each guess round and bits of information obtained can be found <b><a href = "https://ma562.github.io/Wordle-Solver-with-Random-Selection-/"><mark>here</mark></a></b>.
 			</div>
 			<div class = "stats">
 				<img src = "images/freq_guess1.PNG" class = "pic" width = "100%" alt = "">
@@ -189,7 +189,7 @@
 				<li>If we get <span style="background-color:#c8b653">t</span>, we know the answer is either <b>taker</b> or <b>mater</b>. Otherwise, if we get <span style="background-color:#787c7f">t</span>, we can eliminate <b>taker</b> and <b>mater</b></li>
 				<br>
 				With this method implemented and the word <b>tares</b> being used to start off each guess, the average number of guesses required to arrive at the correct answer was about <b>4.502</b>.<br><br>
-				A demonstration video and additional detailed information including the word guess history, chances of winning  and number of possible answers on each guess round and bits of information obtained can be found <b><a href = "https://ma562.github.io/elimination_wordle_solver_results/">here</a></b>.
+				A demonstration video and additional detailed information including the word guess history, chances of winning  and number of possible answers on each guess round and bits of information obtained can be found <b><a href = "https://ma562.github.io/elimination_wordle_solver_results/"><mark>here</mark></a></b>.
 			</div>
 			<div class = "stats2">
 				<img src = "images/freq_guess2.PNG" class = "pic" width = "100%" alt = "">
