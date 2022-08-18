@@ -71,6 +71,28 @@
 	margin-left: 25px;
 }
 
+.main_video {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	top: 100px;
+	position: relative;
+}
+
+.vid0 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	left: 2%;
+	width: 96%;
+	padding: 15px;
+	background: #00274c;
+	border-radius: 20px;
+	text-align: center;
+}
+
 .top_info {
 	display: flex;
 	flex-wrap: wrap;
@@ -363,7 +385,7 @@
 		top: 30px;
 	}
 
-	.conclusion, .conclusion_about, .stats3, .elimination, .elimination_about, .results1, .results2, .results3, .results4, .best_starter_about, .match, .stats, .stats2, .random_about, .conditions, .rules, .edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
+	.vid0, .conclusion, .conclusion_about, .stats3, .elimination, .elimination_about, .results1, .results2, .results3, .results4, .best_starter_about, .match, .stats, .stats2, .random_about, .conditions, .rules, .edge3, .edge4, .edge5,.edge_case2, .edge_case, .edge1, .edge2, .information, .vid1 {
 		flex: 100%;
 		left: 0%;
 		right: 0%;
